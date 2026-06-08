@@ -283,8 +283,8 @@
     <div style="font-weight:600; font-size:12px; margin-bottom:4px;">Show parcels</div>
     <select id="status_select" class="select-full">
       <option value="all">All parcels</option>
-      <option value="vacant">Vacant only</option>
-      <option value="not_vacant">Not vacant only</option>
+      <option value="vacant">VBN issued</option>
+      <option value="not_vacant">VBN not issued</option>
     </select>
   </div>
 
@@ -564,8 +564,8 @@ activeColorMetric = valueMetric;
   updateLegend(activeColorMetric, colorMin, colorMax);
 
   var statusText = "All parcels";
-  if (statusMode === "vacant") statusText = "Vacant only";
-  if (statusMode === "not_vacant") statusText = "Not vacant only";
+  if (statusMode === "vacant") statusText = "VBN issued";
+  if (statusMode === "not_vacant") statusText = "VBN not issued";
 
   var condText = selectedConditions.length === 0
     ? "All conditions"
